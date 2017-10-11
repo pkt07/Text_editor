@@ -1,0 +1,23 @@
+.content{
+	height:100px;
+	width:572px;
+	border:1px solid grey;
+	
+}
+.row{
+	height:100px;
+	width:570px;
+	border:2px solid grey;
+	margin-left:-1px;
+}
+.first{
+	height:44px;
+	width:570px;
+	border:1px solid grey;
+	margin-left:-15px;
+
+.btn-default{
+	height:48px;
+	width:60px"
+}
+
