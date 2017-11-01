@@ -16,10 +16,14 @@ a{
   margin-top: 20px;
   resize: vertical;
   outline: none;
+  border:1px solid grey;
+  display:none;
 }
 
 .toolbar {
   text-align: center;
+  margin-top:50px;
+  
 }
 
 .toolbar a,

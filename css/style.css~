@@ -1,0 +1,25 @@
+
+canvas{
+  width: 600px;
+  height: auto;
+  display: inline-block;
+  border: 1px solid skyblue;
+  margin: 5px;
+  margin-left:5px;
+}
+.bu{
+margin-left:50%;
+}
+
+.btn-info{
+font-size:1.2em;
+background-color:#eee;
+margin-top:5%;
+width:30%;
+height:50px;
+border-radius:5px;
+}
+.btn-info:hover{
+font-size:1.2em;
+background-color:#ccc;
+}
