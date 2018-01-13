@@ -5,99 +5,87 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/default.css" />
-   <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="css/style1.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 <link href='https://fonts.googleapis.com/css?family=Dosis|Candal' rel='stylesheet' type='text/css'>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<section class="navigation">
+
+  <div class="nav-container">
+   
+    <div class="brand">
+    <i class="fa fa-bars" id="bar" style="margin-left:-60px"></i>
+     <a href="#" style="margin-left:10px;letter-spacing: -5px;">gutaloo</a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <input type="text" name="search" placeholder="search for stories,article"><i class="fa fa-search"></i>
+
+    </nav>
+    <i class="fa fa-pencil-square-o" id="pen"></i>
+    <img class="imag" src="images/gallery-item-2-big.jpg" height="38px" width="38px">
+  </div>
+</section>
+
+<div class="bod">
+<button class="btn btn-info" id="bu" style="background-color:#fefefe";>save as draft</button>
+<button class="btn btn-info" id="bu1" style="background-color:#fefefe">View as</button>
+<button class="btn btn-info" id="bu2" style="background-color:#8E44AD;color:white;">Publish</button>
+
+
+</div>
 <div class="container">
 <div class="row">
 	<div class="col-md-8">
 		<div class="toolbar">
 		
-		  <a href="#" data-command='undo'><i class='fa fa-undo'></i></a>
-		 	 <a href="#" data-command='redo'><i class='fa fa-repeat'></i></a>
-		 		 <div class="fore-wrapper"><i class='fa fa-font' style='color:#C96;'></i>
-		 		   <div class="fore-palette">
-		  		  </div>
-		 	 </div>
-		  <div class="back-wrapper"><i class='fa fa-font' style='background:#C96;'></i>
-		 	   <div class="back-palette">
-		    </div>
-		  </div>
 			  <a href="#" data-command='bold'><i class='fa fa-bold'></i></a>
 			  <a href="#" data-command='italic'><i class='fa fa-italic'></i></a>
 			  <a href="#" data-command='underline'><i class='fa fa-underline'></i></a>
-			  <a href="#" data-command='strikeThrough'><i class='fa fa-strikethrough'></i></a>
-			  <a href="#" data-command='justifyLeft'><i class='fa fa-align-left'></i></a>
-			  <a href="#" data-command='justifyCenter'><i class='fa fa-align-center'></i></a>
-			  <a href="#" data-command='justifyRight'><i class='fa fa-align-right'></i></a>
-			  <a href="#" data-command='justifyFull'><i class='fa fa-align-justify'></i></a>
-			  <a href="#" data-command='indent'><i class='fa fa-indent'></i></a>
-			  <a href="#" data-command='outdent'><i class='fa fa-outdent'></i></a>
 			  <a href="#" data-command='insertUnorderedList'><i class='fa fa-list-ul'></i></a>
 			  <a href="#" data-command='insertOrderedList'><i class='fa fa-list-ol'></i></a>
 			  <a href="#" data-command='h1'>H1</a>
 			  <a href="#" data-command='h2'>H2</a>
-			  <a href="#" data-command='createlink'><i class='fa fa-link'></i></a>
-			  <a href="#" data-command='unlink'><i class='fa fa-unlink'></i></a>
-			  <a href="#" data-command='insertimage'><i class='fa fa-image'></i></a>
 			  <a href="#" data-command='p'>P</a>
-			  <a href="#" data-command='subscript'><i class='fa fa-subscript'></i></a>
-			  <a href="#" data-command='superscript'><i class='fa fa-superscript'></i></a>
+			  
+			  <a href="#" data-command='quotes'><i class='fa fa-quote-left'></i></a>
+		 
+		 <a href="#" data-command='createlink'><i class='fa fa-link'></i></a>
+  <a href="#" data-command='unlink'><i class='fa fa-unlink'></i></a>	
+  <a href="#" data-command='table'><i class='fa fa-th'></i></a>
+  <input type="file" multiple="true" accept="image/*" id="fileInput" onchange="upload()" />
 		</div>
-		<button class="btn btn-info text" id="text">Add text</button>
-		<button class="btn btn-info imag" id="image">Add Image</button>
-		<button class="btn btn-info text" id="text1">Add Paragraph</button>
+
 		
 </div>
 <div id='editor' contenteditable>
+<canvas id="mainImgCanvas"></canvas>
+        
 </div>
 </div>
 </div>
 </div>
-
-
-<div id="imageinfo" style="display:none">
     
-    <canvas id="fgimgCanvas"></canvas>
-
-<div class="bu">
-  <input id="fgimgInput" type="file" multiple="false" accept="image/*" onchange="fgUploade()" /> 
-</div>
-</div>
-      
-  </div>
-</div>
-<div id='editor1' contenteditable>
-<script src="js/indexim.js"></script>
- <script src="js/index.js"></script>
- <script src = "https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <script src = "https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
 <script>
-	$(document).ready(
-    function() {
-        $("#image").click(function() {
-            $("#imageinfo").toggle();
-        });
-    });
-    </script>
-    <script>
-	$(document).ready(
-    function() {
-        $("#text").click(function() {
-            $("#editor").toggle();
-        });
-    });
-    </script>
-    <script>
-	$(document).ready(
-    function() {
-        $("#text1").click(function() {
-            $("#editor1").toggle();
-        });
-    });
-    </script>
+ // Global variables
+ var img;
+ var bgImg;
+ // upload
+ function upload() {
+   var mainImgCanvas = document.getElementById('mainImgCanvas');
+   var fileInput = document.getElementById('fileInput');
+   img = new SimpleImage(fileInput);
+   img.drawTo(mainImgCanvas);
+   document.getElementById("cross").style.display="block";
+   return img;
+ }; 
+</script>
+ <script src="js/index.js"></script>
+
 </body>
  </html>

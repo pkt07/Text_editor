@@ -1,0 +1,18 @@
+
+canvas{
+  width: 525px;
+  height: auto;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.can{
+margin-top:-230px;
+margin-left:-130px;
+}
+#blck{
+	display:none;
+}
+.show{
+display:block;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Index</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="css/style1.css">
+
+   
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<link href='https://fonts.googleapis.com/css?family=Dosis|Candal' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<section class="navigation">
+
+  <div class="nav-container">
+   
+    <div class="brand">
+    <i class="fa fa-bars" id="bar" style="margin-left:-60px"></i>
+     <a href="#" style="margin-left:10px;letter-spacing: -5px;">gutaloo</a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <input type="text" name="search" placeholder="search for stories"><i class="fa fa-search"></i>
+
+    </nav>
+    <i class="fa fa-pencil-square-o" id="pen"></i>
+    <img class="imag" src="images/gallery-item-2-big.jpg" height="38px" width="38px">
+  </div>
+</section>
+
+<div class="bod">
+<button class="btn btn-info" id="bu" style="background-color:#fefefe";>Save as draft</button>
+<button class="btn btn-info" id="bu1" style="background-color:#fefefe">View as</button>
+<button class="btn btn-info" id="bu2" style="background-color:#8E44AD;color:white;">Publish</button>
+ 
+</div>
+<button class="btn btn-info" id="impo">Import from PC</button>
+<button class="btn btn-info" id="impo1">Upload from Drive</button>
+
+<div id="blck" class="show">
+<div class="butt" style="margin-left:19.5%;position:relative;top:40px;">	
+<input class="btn btn-info" id="imp" placeholder="location">
+<input class="btn btn-info" id="imp1" placeholder="Date">
+<input class="btn btn-info" id="imp1" placeholder="Tag Friend">
+</div>
+
+<div class="container" style="position:relative;top:100px">
+<h1 class="head">Enter Title</h1>
+<p class="para">a few lines about your story</p>
+</div>
+<div class="container" style="margin-top:30%;margin-left:30%;">
+  <div class="row">
+	
+
+<!--Main -->
+    <div class="can">
+      <div>
+	 
+        <canvas id="mainImgCanvas"></canvas>
+        <input type="file" multiple="true" accept="image/*" id="fileInput" onchange="upload()" />
+       <i class="fa fa-window-close" id="cross" style="display:none"></i>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<script src = "https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+<script>
+ // Global variables
+ var img;
+ var bgImg;
+ // upload
+ function upload() {
+   var mainImgCanvas = document.getElementById('mainImgCanvas');
+   var fileInput = document.getElementById('fileInput');
+   img = new SimpleImage(fileInput);
+   img.drawTo(mainImgCanvas);
+   document.getElementById("cross").style.display="block";
+   return img;
+ };
+
+ // bgUpload
+ function bgUpload() {
+   var bgImgCanvas = document.getElementById('bgImgCanvas');
+   var bgImgInput = document.getElementById('bgImgInput');
+   bgImg = new SimpleImage(bgImgInput);
+   bgImg.drawTo(bgImgCanvas);
+ }
+
+ function othersFilter() {
+
+ };
+ 
+ $(document).ready(function(){
+    $("#cross").click(function(){
+         $("#mainImgCanvas").remove();
+    });
+  }); 
+  $(document).ready(function(){
+    $("#fileInput").click(function(){
+         $("#mainImgCanvas").append();
+    });
+  });
+  
+$("#impo").click(function(){
+    $("#blck").toggle("show");
+});
+  
+  
+</script>
+</body>
+ </html>

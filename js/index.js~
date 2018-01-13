@@ -20,3 +20,6 @@ $('.toolbar a').click(function(e) {
   }
   else document.execCommand($(this).data('command'), false, null);
 });
+
+
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	
+	
+	<title>Ideepeners</title>
+	
+
+	
+	<meta name="description" content="Create your straw poll in seconds on StrawPoll.com. Type your question, select poll options, share the link and evalute your poll in real-time." />
+	
+
+	
+
+	<meta name="referrer" content="unsafe-url">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	<link rel="stylesheet" href="http://strawpoll.com/css/style.css" />
+	<link rel="stylesheet" href="http://strawpoll.com/css/pikaday.css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+	
+	<link rel="alternate" hreflang="de" href="https://strawpoll.de/" />
+	<link rel="alternate" hreflang="en" href="https://strawpoll.com/" />
+	<link rel="alternate" hreflang="fr" href="https://strawpoll.de/?lang=fr" />
+	
+
+	
+
+	
+</head>
+<body>
+
+	<script type="text/javascript" src="http://strawpoll.com/javascripts/jquery-3.1.1.min.js"></script>
+
+	<div id="wrapper">
+		
+		
+
+<section class="content last-section">
+    <div class="container container-small box box-orange">
+        <div class="poll-wrapper">
+            <form id="newpoll" action="/new" method="post">
+            <h2 class="center">New Poll</h2>
+            <div class="box-title">
+                <div class="input-wrapper">
+                    <input id="newq" name="question" class="title" type="text" placeholder="Type your question here..." />
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="poll-answers">
+                    <div class="answer"><span class="count">1.</span> <input id="a0" name="a0" value="" placeholder="poll option..."/></div>
+                    <div class="answer"><span class="count">2.</span> <input id="a1" name="a1" placeholder="poll option..."/></div>
+                    <div class="answer"><span class="count">3.</span> <input name="a2" placeholder="poll option..."/></div>
+                </div>
+
+                
+
+                <div class="poll-advanced">
+                    <label for="datepicker">Expiry date (inclusive, GMT/UTC, not working yet)</label>
+                    <input type="text" name="expire" id="datepicker">
+                </div>
+
+                <div class="poll-action">
+                    <div><button class="action" id="newaction">Create Poll</button> <div class="button secondary" id="advanced">Advanced</div></div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var picker = new Pikaday({ field: document.getElementById('datepicker') });
+    });
+</script>
+
+
+		<div id="push"></div>
+	</div>
+	
+
+	<script type="text/javascript">
+		var translate_poll_option = 'poll option';
+		var translate_minoptions = 'Add at least two poll options...';
+		var translate_search = 'Search';
+		var translate_no_answer_selected = 'No answer selected.';
+	</script>
+	
+	<script type="text/javascript" src="http://strawpoll.com/javascripts/functions.js"></script>
+	<script type="text/javascript" src="http://strawpoll.com/javascripts/chart.min.js"></script>
+	<script type="text/javascript" src="http://strawpoll.com/javascripts/pikaday.js"></script>
+
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','http://strawpoll.com/javascripts/analytics.js','ga');
+
+	ga('create', 'UA-91001217-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+</script>
+</body>
+</html>
