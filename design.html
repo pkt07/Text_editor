@@ -63,7 +63,7 @@
 		
 </div>
 <div id='editor' contenteditable>
-<canvas id="mainImgCanvas"></canvas>
+<!--<canvas id="mainImgCanvas"></canvas>-->
         
 </div>
 </div>
@@ -77,10 +77,10 @@
  var bgImg;
  // upload
  function upload() {
-   var mainImgCanvas = document.getElementById('mainImgCanvas');
+   var mainImgCanvas = document.getElementById('editor');
    var fileInput = document.getElementById('fileInput');
    img = new SimpleImage(fileInput);
-   img.drawTo(mainImgCanvas);
+   img.drawTo(editor);
    document.getElementById("cross").style.display="block";
    return img;
  }; 
